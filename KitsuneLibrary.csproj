@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <LangVersion>latest</LangVersion>
+    <Aurthors>BlueKitsunex777x</Aurthors>
+    <AssemblyName>KitsuneLibrary</AssemblyName>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    
+    <GameDir Condition="'$(GameDir)' == ''">/home/sapphire/.local/share/Steam/steamapps/common/BlockStory</GameDir>
+    <Managed Condition="'$(Managed)' == ''">$(GameDir)/BlockStoryLinux_Data/Managed</Managed>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <!-- <EmbeddedResource Include="icon.png"><LogicalName>icon.png</LogicalName></EmbeddedResource> -->
+  </ItemGroup>
+</Project>
