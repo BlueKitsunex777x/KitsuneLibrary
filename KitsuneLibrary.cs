@@ -8,6 +8,7 @@ using UnityEngine;
 [BepInDependency(Core.Guid)]
 public class KitsuneLibrary : BaseUnityPlugin
 {
+    public const string Guid = "com.BlueKitsunex777x.KitsuneLibrary";
     public static bool Enabled = PlayerPrefs.GetInt("WoodToCharcoal_Enabled", 1) != 0;
 
     public static bool _savedEnabled = Enabled;
@@ -17,7 +18,7 @@ public class KitsuneLibrary : BaseUnityPlugin
     {
         if (!BSMKCheck.Passed(this)) return;
 
-        try { new Harmony("com.BlueKitsunex777x.KitsuneLibrary").PatchAll(); L.Info("loaded"); }
+        try { new Harmony(KitsuneLibrary.Guid).PatchAll(); L.Info("loaded"); }
         catch (Exception e) { L.Err("PatchAll", e); }
 
         ModRegistry.Register(new ModInfo
